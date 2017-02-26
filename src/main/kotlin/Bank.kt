@@ -14,7 +14,7 @@ fun main(args: Array<String>) {
     val generator = Random()
     val customerQueue = LinkedList<Customer>() // queue for arriving Customers
     val tellerQueue = LinkedList<Teller>() // queue for available Tellers
-    val presentTellers = Array(TELLERCOUNT, { i -> Teller() }) // array of Tellers present
+    val presentTellers = Array(TELLERCOUNT) { Teller() } // array of Tellers present
 
     var nextCustomerEta = generator.nextInt(4) + 2
 
